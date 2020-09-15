@@ -90,10 +90,9 @@ var MillionaireModel = function(data) {
 
  	// Uses the fifty-fifty option of the user
  	self.fifty = function(item, event) {
- 		if(self.transitioning)
+ 		if(self.transitioning || !$(event.target).hasClass('hoverable'))
  			return;
-		$(event.target).attr('style', 'background-position: 0 -50px !important');
-		$(event.target).removeClass('hoverable');
+		startSound('5050', false);
  		var correct = this.questions[self.level() - 1].correct;
  		var first = (correct + 1) % 4;
  		var second = (first + 1) % 4;
@@ -109,6 +108,40 @@ var MillionaireModel = function(data) {
  		if(first == 3 || second == 3) {
  			$("#answer-four").fadeOut('slow');
  		}
+		self.fadeOutOption(item, event);
+ 	}
+
+	self.phone_friend = function(item, event) {
+		if(self.transitioning || !$(event.target).hasClass('hoverable'))
+			return;
+		self.stopAllAudio();
+	    startSound('phone_main', false);
+	    $("body").click(() => {
+			$("body").click(() => {
+				$("body").off("click");
+				stopSound('phone_main');
+				startSound('phone_end', false);
+				self.startBackgroundAudio();
+				self.fadeOutOption(item, event);
+			});
+		});
+	}
+
+	self.ask_audience = function(item, event) {
+		if(self.transitioning || !$(event.target).hasClass('hoverable'))
+			return;
+		self.stopAllAudio();
+	    startSound('askaud_begin', false);
+	    startSound('askaud_loop', true);
+	    $("body").click(() => {
+			$("body").click(() => {
+				$("body").off("click");
+				stopSound('askaud_loop');
+				startSound('askaud_finish');
+				self.startBackgroundAudio();
+				self.fadeOutOption(item, event);
+			});
+		});
  	}
 
  	// Fades out an option used if possible

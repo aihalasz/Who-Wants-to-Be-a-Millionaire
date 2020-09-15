@@ -55,7 +55,11 @@ Author: Aaron Nech
 		<audio id="wrong_15" src='sound/wrong_15.wav'></audio>
 		<!-- Misc audio -->
 		<audio id="5050" src='sound/5050.wav'></audio>
-		<audio id="askaud" src='sound/askaud.wav'></audio>
+		<audio id="askaud_begin" src='sound/askaud_begin.wav'></audio>
+		<audio id="askaud_loop" src='sound/askaud_loop.wav'></audio>
+		<audio id="askaud_finish" src='sound/askaud_finish.wav'></audio>
+		<audio id="phone_main" src='sound/phone_main.wav'></audio>
+		<audio id="phone_end" src='sound/phone_end.wav'></audio>
 		<audio id="lets_play" src='sound/lets_play.mp3'></audio>
 
 		<div id="pre-pre-start">
@@ -97,8 +101,8 @@ Author: Aaron Nech
 			</div>
 			<div id="options">
 				<div id="fifty" class="options-button hoverable" data-bind="click: fifty"></div>
-				<div id="phone-friend" class="options-button hoverable" data-bind="click: fadeOutOption"></div>
-				<div id="audience" class="options-button hoverable" data-bind="click: fadeOutOption"></div>
+				<div id="phone-friend" class="options-button hoverable" data-bind="click: phone_friend"></div>
+				<div id="audience" class="options-button hoverable" data-bind="click: ask_audience"></div>
 				<!-- <div id="money">$<span data-bind="text: formatMoney()"></span></div> -->
 			</div>
 			<div id="question-box">
