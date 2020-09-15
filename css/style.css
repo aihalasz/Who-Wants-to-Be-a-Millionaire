@@ -3,6 +3,18 @@ body {
 	font-family: 'Roboto Slab', serif;
 }
 
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+.white {
+	color: white;
+}
+
 .centered {
 	text-align: center;
 }
@@ -37,7 +49,7 @@ audio {
 }
 
 .active {
-	color: green;
+	color: orange !important;
 	font-weight: bold;
 	text-decoration: underline;
 }

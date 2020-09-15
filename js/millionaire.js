@@ -64,7 +64,7 @@ var MillionaireModel = function(data) {
  	// The current level(starting at 1) 
 	 this.level = new ko.observable(1);
 
-	this.answers = new ko.observableArray(Array(15).fill(0));
+	this.answers = new ko.observableArray(Array(15).fill(null));
 	 
 	self.answer_delay = 3000;
 
@@ -83,7 +83,11 @@ var MillionaireModel = function(data) {
  	// from the current question
  	self.getAnswerText = function(index) {
  		return self.questions[self.level() - 1].content[index];
- 	}
+	 }
+	 
+	 self.isGreen = (i) => self.answers()[i - 1] === true;
+	 self.isRed = (i) => self.answers()[i - 1] === false;
+	 self.isWhite = (i) => self.answers()[i - 1] === null;
 
  	// Uses the fifty-fifty option of the user
  	self.fifty = function(item, event) {
@@ -117,9 +121,12 @@ var MillionaireModel = function(data) {
  	// Attempts to answer the question with the specified
  	// answer index (0-3) from a click event of elm
  	self.answerQuestion = function(index, elm) {
-		 console.log("answerQuestion");
- 		if(self.transitioning)
- 			return;
+ 		if(self.transitioning) {
+			console.log("transitioning")
+			return;
+		 }
+			 
+		console.log("answerQuestion");
 		 self.transitioning = true;
 		$("#" + elm).css('background', 'orange');
 		// if(self.level() >= 6)
@@ -136,11 +143,14 @@ var MillionaireModel = function(data) {
 		// }
 		$("body").click(() => {
 			$("body").click(() => {
-				if(self.questions[self.level() - 1].correct == index) {
+				$("body").off("click");
+				var isCorrect = self.questions[self.level() - 1].correct == index
+				if(isCorrect) {
 					self.rightAnswer(elm);
 				} else {
 					self.wrongAnswer(elm);
 				}
+				self.answers()[self.level() - 1] = isCorrect;
 			});
 		});
  	}
@@ -176,22 +186,23 @@ var MillionaireModel = function(data) {
 			// 	}
 			// }
 		}
-		$("body").off("click");
+		
 	}
 
  	self.rightAnswer = function(elm) {
-		console.log("rightAnswer");
+		console.log("rightAnswer", elm);
  		$("#" + elm).slideUp('slow', function() {
  			startSound('rightsound', false);
  			$("#" + elm).css('background', 'green').slideDown('slow').delay(self.answer_delay).queue(function() {
 				self._next_question(elm);
+				$(this).dequeue();
  			});
  		});
  	}
 
  	// Executes the proceedure of guessing incorrectly, losing the game.
  	self.wrongAnswer = function(elm) {
-		console.log("wrongAnswer");
+		console.log("wrongAnswer", elm);
  		$("#" + elm).slideUp('slow', function() {
  			startSound('wrongsound', false);
  			$("#" + elm).css('background', 'red').slideDown('slow').delay(self.answer_delay).queue(function() {
@@ -201,7 +212,7 @@ var MillionaireModel = function(data) {
  				// 	self.transitioning = false;
 				 self._next_question(elm);
 				//});
-				
+				$(this).dequeue();
  			});
  		});
  	}
