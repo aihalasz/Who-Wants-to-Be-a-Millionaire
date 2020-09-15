@@ -163,13 +163,18 @@ var MillionaireModel = function(data) {
 		console.log("answerQuestion");
 		 self.transitioning = true;
 		$("#" + elm).css('background', 'orange');
-		self.stopAllAudio();
-		self.startFinalAnswerAudio();
+		if(self.level() >= 6) {
+			self.stopAllAudio();
+			self.startFinalAnswerAudio();
+		}
 		$("body").click(() => {
 			$("body").click(() => {
 				$("body").off("click");
 				var isCorrect = self.questions[self.level() - 1].correct == index
-				self.stopFinalAnswerAudio();
+				if(self.level() >= 5)
+				{
+					self.stopAllAudio();
+				}
 				if(isCorrect) {
 					self.rightAnswer(elm);
 				} else {
@@ -202,8 +207,11 @@ var MillionaireModel = function(data) {
 			$("#answer-two").show();
 			$("#answer-three").show();
 			$("#answer-four").show();
-			self.stopAllAudio();
-			self.startBackgroundAudio();
+			if(self.level() > 5)
+			{
+				self.stopAllAudio();
+				self.startBackgroundAudio();
+			}
 			self.transitioning = false;
 		}
 	}
