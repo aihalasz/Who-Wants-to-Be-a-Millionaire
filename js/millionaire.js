@@ -30,6 +30,7 @@ Number.prototype.money = function(fixed, decimalDelim, breakDelim){
 * @param loop the boolean flag to loop or not loop this sound
 */
 startSound = function(id, loop) {
+	console.log("starting audio: ", id);
 	soundHandle = document.getElementById(id);
 	if(loop)
 		soundHandle.setAttribute('loop', loop);
@@ -62,12 +63,10 @@ var MillionaireModel = function(data) {
  	this.money = new ko.observable(0);
 
  	// The current level(starting at 1) 
-	 this.level = new ko.observable(6);
+	 this.level = new ko.observable(10);
 
 	this.answers = new ko.observableArray(Array(15).fill(null));
 	 
-	self.answer_delay = 4000;
-
  	// The three options the user can use to 
  	// attempt to answer a question (1 use each)
  	this.usedFifty = new ko.observable(false);
@@ -131,24 +130,13 @@ var MillionaireModel = function(data) {
 		console.log("answerQuestion");
 		 self.transitioning = true;
 		$("#" + elm).css('background', 'orange');
-		if(self.level() >= 6)
-		{
-			stopSound("background");
-			if(self.level() < 11)
-			{
-				startSound("final_answer_6-10");
-			}
-			else
-			{
-				startSound("final_answer_11-15");
-			}
-		}
+		self.stopAllAudio();
+		self.startFinalAnswerAudio();
 		$("body").click(() => {
 			$("body").click(() => {
 				$("body").off("click");
 				var isCorrect = self.questions[self.level() - 1].correct == index
-				stopSound("final_answer_6-10");
-				stopSound("final_answer_11-15");
+				self.stopFinalAnswerAudio();
 				if(isCorrect) {
 					self.rightAnswer(elm);
 				} else {
@@ -178,26 +166,18 @@ var MillionaireModel = function(data) {
 			$("#answer-two").show();
 			$("#answer-three").show();
 			$("#answer-four").show();
+			self.stopAllAudio();
+			self.startBackgroundAudio();
 			self.transitioning = false;
-			if(self.level() >= 6) {
-				if(self.level() < 11)
-				{
-					startSound("background");
-				}
-				else
-				{
-					startSound("background");
-				}
-			}
 		}
-		
 	}
 
  	self.rightAnswer = function(elm) {
 		console.log("rightAnswer", elm);
  		$("#" + elm).slideUp('slow', function() {
- 			startSound('rightsound', false);
- 			$("#" + elm).css('background', 'lime').slideDown('slow').delay(self.answer_delay).queue(function() {
+			[_, duration] = self.getRighAnswerAudio();
+			self.startRighAnswerAudio();
+ 			$("#" + elm).css('background', 'lime').slideDown('slow').delay(duration ?? 0).queue(function() {
 				self._next_question(elm);
 				$(this).dequeue();
  			});
@@ -208,13 +188,14 @@ var MillionaireModel = function(data) {
  	self.wrongAnswer = function(elm) {
 		console.log("wrongAnswer", elm);
  		$("#" + elm).slideUp('slow', function() {
- 			startSound('wrongsound', false);
- 			$("#" + elm).css('background', 'red').slideDown('slow').delay(self.answer_delay).queue(function() {
+			[_, duration] = self.getWrongAnswerAudio();
+			self.startWrongAnswerAudio();
+ 			$("#" + elm).css('background', 'red').slideDown('slow').delay(duration ?? 0).queue(function() {
  				//$("#game").fadeOut('slow', function() {
  				// 	$("#game-over").html('Game Over!');
  				// 	$("#game-over").fadeIn('slow');
  				// 	self.transitioning = false;
-				 self._next_question(elm);
+				self._next_question(elm);
 				//});
 				$(this).dequeue();
  			});
@@ -226,6 +207,162 @@ var MillionaireModel = function(data) {
 		console.log("formatMoney");
 	    return self.money().money(2, '.', ',');
 	}
+
+	self.getBackgroundAudio = (level = null) => {
+		switch (level ?? self.level()) {
+			case  1:
+			case  2:
+			case  3:
+			case  4:
+			case  5: return 'background_1_5';
+			case  6: return 'background_6';
+			case  7: return 'background_7';
+			case  8: return 'background_8';
+			case  9: return 'background_9';
+			case 10: return 'background_10';
+			case 11: return 'background_11';
+			case 12: return 'background_12';
+			case 13: return 'background_13';
+			case 14: return 'background_14';
+			case 15: return 'background_15';
+			default: return null;
+		}
+	};
+
+	self.startBackgroundAudio = () => {
+		var backgroundAudio = self.getBackgroundAudio();
+		if (backgroundAudio) {
+			startSound(backgroundAudio, true);
+		}
+	};
+
+	self.stopBackgroundAudio = () => {
+		for (var level = 1; level <= 15; level++) {
+			var backgroundAudio = self.getBackgroundAudio(level);
+			if (backgroundAudio) {
+				stopSound(backgroundAudio);
+			}
+		}
+	};
+
+	self.getRighAnswerAudio = (level = null) => {
+		switch (level ?? self.level()) {
+			case  1:
+			case  2:
+			case  3:
+			case  4: return ['right_1_4', 3000];
+			case  5: return ['right_5', 7000];
+			case  6: return ['right_6', 3000];
+			case  7: return ['right_7', 3000];
+			case  8: return ['right_8', 3000];
+			case  9: return ['right_9', 3000];
+			case 10: return ['right_10', 9000];
+			case 11: return ['right_11', 5000];
+			case 12: return ['right_12', 5000];
+			case 13: return ['right_13', 5000];
+			case 14: return ['right_14', 5000];
+			case 15: return ['right_15', 18000];
+			default: return null;
+		}
+	};
+
+	self.startRighAnswerAudio = () => {
+		var [righAnswerAudio, _] = self.getRighAnswerAudio();
+		if (righAnswerAudio) {
+			startSound(righAnswerAudio, false);
+		}
+	};
+
+	self.stopRighAnswerAudio = () => {
+		for (var level = 1; level <= 15; level++) {
+			var [righAnswerAudio, _] = self.getRighAnswerAudio(level);
+			if (righAnswerAudio) {
+				stopSound(righAnswerAudio);
+			}
+		}
+	};
+
+	self.getWrongAnswerAudio = (level = null) => {
+		switch (level ?? self.level()) {
+			case  1:
+			case  2:
+			case  3:
+			case  4:
+			case  5: return ['wrong_1_5', 5000];
+			case  6: return ['wrong_6', 5000];
+			case  7: return ['wrong_7', 5000];
+			case  8: return ['wrong_8', 5000];
+			case  9: return ['wrong_9', 5000];
+			case 10:
+			case 11:
+			case 12:
+			case 13:
+			case 14: return ['wrong_10_14', 5000];
+			case 15: return ['wrong_15', 8000];
+			default: return null;
+		}
+	};
+
+	self.startWrongAnswerAudio = () => {
+		var [wrongAnswerAudio, _] = self.getWrongAnswerAudio();
+		if (wrongAnswerAudio) {
+			startSound(wrongAnswerAudio, false);
+		}
+	};
+
+	self.stopWrongAnswerAudio = () => {
+		for (var level = 1; level <= 15; level++) {
+			var [wrongAnswerAudio, _] = self.getWrongAnswerAudio(level);
+			if (wrongAnswerAudio) {
+				stopSound(wrongAnswerAudio);
+			}
+		}
+	};
+
+	self.getFinalAnswerAudio = (level = null) => {
+		switch (level ?? self.level()) {
+			case  1:
+			case  2:
+			case  3:
+			case  4:
+			case  5: return null;
+			case  6: return 'finalanswer_6';
+			case  7: return 'finalanswer_7';
+			case  8: return 'finalanswer_8';
+			case  9: return 'finalanswer_9';
+			case 10:
+			case 11:
+			case 12:
+			case 13:
+			case 14:
+			case 15: return 'finalanswer_10_15';
+			default: return null;
+		}
+	}
+
+	self.startFinalAnswerAudio = () => {
+		var finalAnswerAudio = self.getFinalAnswerAudio();
+		if (finalAnswerAudio) {
+			startSound(finalAnswerAudio, false);
+		}
+	};
+
+	self.stopFinalAnswerAudio = () => {
+		
+		for (var level = 1; level <= 15; level++) {
+			var finalAnswerAudio = self.getFinalAnswerAudio(level);
+			if (finalAnswerAudio) {
+				stopSound(finalAnswerAudio);
+			}
+		}
+	};
+
+	self.stopAllAudio = () => {
+		self.stopBackgroundAudio();
+		self.stopFinalAnswerAudio();
+		self.stopRighAnswerAudio();
+		self.stopWrongAnswerAudio();
+	};
 };
 
 // Executes on page load, bootstrapping
@@ -246,9 +383,10 @@ $(document).ready(function() {
 		$("#start").click(function() {
 			console.log("$#start.click");
 			var index = 0;
-			ko.applyBindings(new MillionaireModel(data.games[index]));
+			var m = new MillionaireModel(data.games[index]);
+			ko.applyBindings(m);
 			stopSound('lets_play');
-			startSound('background', true);
+			m.startBackgroundAudio();
 			$("#pre-start").fadeOut('slow', function() {
 				$("#game").fadeIn('slow');
 			});
