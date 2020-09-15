@@ -93,7 +93,8 @@ var MillionaireModel = function(data) {
  	self.fifty = function(item, event) {
  		if(self.transitioning)
  			return;
- 		$(event.target).fadeOut('slow');
+		$(event.target).attr('style', 'background-position: 0 -50px !important');
+		$(event.target).removeClass('hoverable');
  		var correct = this.questions[self.level() - 1].correct;
  		var first = (correct + 1) % 4;
  		var second = (first + 1) % 4;
@@ -115,7 +116,8 @@ var MillionaireModel = function(data) {
  	self.fadeOutOption = function(item, event) {
  		if(self.transitioning)
  			return;
- 		$(event.target).fadeOut('slow');
+		$(event.target).attr('style', 'background-position: 0 -50px !important');
+		$(event.target).removeClass('hoverable');
  	}
 
  	// Attempts to answer the question with the specified
