@@ -62,11 +62,11 @@ var MillionaireModel = function(data) {
  	this.money = new ko.observable(0);
 
  	// The current level(starting at 1) 
-	 this.level = new ko.observable(1);
+	 this.level = new ko.observable(6);
 
 	this.answers = new ko.observableArray(Array(15).fill(null));
 	 
-	self.answer_delay = 3000;
+	self.answer_delay = 4000;
 
  	// The three options the user can use to 
  	// attempt to answer a question (1 use each)
@@ -131,22 +131,24 @@ var MillionaireModel = function(data) {
 		console.log("answerQuestion");
 		 self.transitioning = true;
 		$("#" + elm).css('background', 'orange');
-		// if(self.level() >= 6)
-		// {
-		// 	stopSound("background");
-		// 	if(self.level() < 11)
-		// 	{
-		// 		startSound("final_answer_6-10");
-		// 	}
-		// 	else
-		// 	{
-		// 		startSound("final_answer_11-15");
-		// 	}
-		// }
+		if(self.level() >= 6)
+		{
+			stopSound("background");
+			if(self.level() < 11)
+			{
+				startSound("final_answer_6-10");
+			}
+			else
+			{
+				startSound("final_answer_11-15");
+			}
+		}
 		$("body").click(() => {
 			$("body").click(() => {
 				$("body").off("click");
 				var isCorrect = self.questions[self.level() - 1].correct == index
+				stopSound("final_answer_6-10");
+				stopSound("final_answer_11-15");
 				if(isCorrect) {
 					self.rightAnswer(elm);
 				} else {
@@ -177,16 +179,16 @@ var MillionaireModel = function(data) {
 			$("#answer-three").show();
 			$("#answer-four").show();
 			self.transitioning = false;
-			// if(self.level() >= 6) {
-			// 	if(self.level() < 11)
-			// 	{
-			// 		startSound("background");
-			// 	}
-			// 	else
-			// 	{
-			// 		startSound("background");
-			// 	}
-			// }
+			if(self.level() >= 6) {
+				if(self.level() < 11)
+				{
+					startSound("background");
+				}
+				else
+				{
+					startSound("background");
+				}
+			}
 		}
 		
 	}
@@ -239,12 +241,13 @@ $(document).ready(function() {
 			console.log("$#pre-pre-start-button.click");
 			$("#pre-pre-start").hide();
 			$("#pre-start").show();
-			//startSound('lets_play', false);
+			startSound('lets_play', false);
 		});
 		$("#start").click(function() {
 			console.log("$#start.click");
 			var index = 0;
 			ko.applyBindings(new MillionaireModel(data.games[index]));
+			stopSound('lets_play');
 			startSound('background', true);
 			$("#pre-start").fadeOut('slow', function() {
 				$("#game").fadeIn('slow');
