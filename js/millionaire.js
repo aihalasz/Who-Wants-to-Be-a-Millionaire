@@ -431,14 +431,14 @@ $(document).ready(function() {
 			console.log("$#pre-pre-start-button.click");
 			$("#pre-pre-start").hide();
 			$("#pre-start").show();
-			startSound('lets_play', false);
+			startSound('lets_play_short', false);
 		});
 		$("#start").click(function() {
 			console.log("$#start.click");
 			var index = 0;
 			var m = new MillionaireModel(data.games[index]);
 			ko.applyBindings(m);
-			stopSound('lets_play');
+			stopSound('lets_play_short');
 			m.startBackgroundAudio();
 			$("#pre-start").fadeOut('slow', function() {
 				$("#game").fadeIn('slow');
