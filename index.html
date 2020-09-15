@@ -65,23 +65,34 @@ Author: Aaron Nech
 				<div id="money">$<span data-bind="text: formatMoney()"></span></div>
 			</div>
 			<div id="question-box">
-				<span class="big-text">Q:</span>
 				<span class="content" data-bind="text: getQuestionText()"></span>
 			</div>
-			<div id="answer-box">
-				<div id="answer-one" class="answer" data-bind="click: function(d, e) { e.preventDefault();answerQuestion(0, $element.id); }">
-					<span class="big-text">A.</span><span data-bind="text: getAnswerText(0)"></span>
-				</div>
-				<div id="answer-two" class="answer" data-bind="click: function(d, e) { e.preventDefault();answerQuestion(1, $element.id); }">
-					<span class="big-text">B.</span><span data-bind="text: getAnswerText(1)"></span>
-				</div>
-				<div id="answer-three" class="answer" data-bind="click: function(d, e) { e.preventDefault(); answerQuestion(2, $element.id); }">
-					<span class="big-text">C.</span><span data-bind="text: getAnswerText(2)"></span>
-				</div>
-				<div id="answer-four" class="answer" data-bind="click: function(d, e) { e.preventDefault(); answerQuestion(3, $element.id);}">
-					<span class="big-text">D.</span><span data-bind="text: getAnswerText(3)"></span>
-				</div>
-			</div>
+			<table id="answer-box">
+				<tr width="50%">
+					<td>
+						<table id="answer-one" class="answer" data-bind="click: function(d, e) { e.preventDefault();answerQuestion(0, $element.id); }">
+							<tr><td class="big-text" width="20%">◆ A:</td><td class="answer-text" data-bind="text: getAnswerText(0)"></td></tr>
+						</table>
+					</td>
+					<td>
+						<table id="answer-two" class="answer" data-bind="click: function(d, e) { e.preventDefault();answerQuestion(1, $element.id); }">
+							<tr><td class="big-text" width="20%">◆ B:</td><td class="answer-text" data-bind="text: getAnswerText(1)"></td></tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table id="answer-three" class="answer" data-bind="click: function(d, e) { e.preventDefault(); answerQuestion(2, $element.id); }">
+							<tr><td class="big-text" width="20%">◆ C:</td><td class="answer-text" data-bind="text: getAnswerText(2)"></td></tr>
+						</table>
+					</td>
+					<td>
+						<table id="answer-four" class="answer" data-bind="click: function(d, e) { e.preventDefault(); answerQuestion(3, $element.id);}">
+							<tr><td class="big-text" width="20%">◆ D:</td><td class="answer-text" data-bind="text: getAnswerText(3)"></td></tr>
+						</table>
+					</td>
+				</tr>
+			</table>
 		</div>
 
 		<!-- Script inclusion: JQuery for effects, Knockout for MVVM, millionaire.js for application -->

@@ -74,6 +74,10 @@ audio {
 	margin-right: 15px;
 }
 
+.answer-text {
+	text-align: center;
+}
+
 #money {
 	font-size: 1.9em;
 	font-weight: bold;
@@ -118,6 +122,7 @@ audio {
 	color: white;
 	font-size: 1.3em;
 	text-align: left;
+	table-layout: fixed;
 	width: 960px;
 	margin: 0 auto;
 }
@@ -130,10 +135,19 @@ audio {
 	display: all;
 }
 
+.answer {
+	table-layout: fixed;
+	width: 100%;
+}
+
 .answer:hover {
-	text-decoration: underline;
 	cursor: pointer;
 }
+
+.answer-text:hover {
+	text-decoration: underline;
+}
+
 
 .options-button {
 	width: 64px;
