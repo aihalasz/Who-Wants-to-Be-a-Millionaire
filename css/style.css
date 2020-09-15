@@ -138,6 +138,9 @@ audio {
 .answer {
 	table-layout: fixed;
 	width: 100%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: cyan;
 }
 
 .answer:hover {
