@@ -197,7 +197,7 @@ var MillionaireModel = function(data) {
 		console.log("rightAnswer", elm);
  		$("#" + elm).slideUp('slow', function() {
  			startSound('rightsound', false);
- 			$("#" + elm).css('background', 'green').slideDown('slow').delay(self.answer_delay).queue(function() {
+ 			$("#" + elm).css('background', 'lime').slideDown('slow').delay(self.answer_delay).queue(function() {
 				self._next_question(elm);
 				$(this).dequeue();
  			});
