@@ -3,6 +3,10 @@ body {
 	font-family: 'Roboto Slab', serif;
 }
 
+.centered {
+	text-align: center;
+}
+
 audio {
 	display: none;
 }
@@ -108,6 +112,10 @@ audio {
 
 #pre-start {
 	display: none;
+}
+
+#pre-pre-start {
+	display: all;
 }
 
 .answer:hover {

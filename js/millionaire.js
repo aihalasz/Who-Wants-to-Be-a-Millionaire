@@ -36,6 +36,12 @@ startSound = function(id, loop) {
 	soundHandle.play();
 }
 
+stopSound = function(id) {
+	soundHandle = document.getElementById(id);
+	soundHandle.pause();
+	soundHandle.currentTime = 0;
+}
+
 /**
 * The View Model that represents one game of
 * Who Wants to Be a Millionaire.
@@ -56,7 +62,11 @@ var MillionaireModel = function(data) {
  	this.money = new ko.observable(0);
 
  	// The current level(starting at 1) 
- 	this.level = new ko.observable(1);
+	 this.level = new ko.observable(1);
+
+	this.answers = new ko.observableArray(Array(15).fill(0));
+	 
+	self.answer_delay = 3000;
 
  	// The three options the user can use to 
  	// attempt to answer a question (1 use each)
@@ -107,58 +117,98 @@ var MillionaireModel = function(data) {
  	// Attempts to answer the question with the specified
  	// answer index (0-3) from a click event of elm
  	self.answerQuestion = function(index, elm) {
+		 console.log("answerQuestion");
  		if(self.transitioning)
  			return;
- 		self.transitioning = true;
- 		if(self.questions[self.level() - 1].correct == index) {
- 			self.rightAnswer(elm);
- 		} else {
- 			self.wrongAnswer(elm);
- 		}
+		 self.transitioning = true;
+		$("#" + elm).css('background', 'orange');
+		// if(self.level() >= 6)
+		// {
+		// 	stopSound("background");
+		// 	if(self.level() < 11)
+		// 	{
+		// 		startSound("final_answer_6-10");
+		// 	}
+		// 	else
+		// 	{
+		// 		startSound("final_answer_11-15");
+		// 	}
+		// }
+		$("body").click(() => {
+			$("body").click(() => {
+				if(self.questions[self.level() - 1].correct == index) {
+					self.rightAnswer(elm);
+				} else {
+					self.wrongAnswer(elm);
+				}
+			});
+		});
  	}
 
  	// Executes the proceedure of a correct answer guess, moving
  	// the player to the next level (or winning the game if all
- 	// levels have been completed)
+	 // levels have been completed)
+	 
+	self._next_question = (elm) => {
+		console.log("_next_question");
+		self.money($(".active").data('amt'));
+		if(self.level() + 1 > 15) {
+			$("#game").fadeOut('slow', function() {
+				$("#game-over").html('You Win!');
+				$("#game-over").fadeIn('slow');
+			});
+		} else {
+			self.level(self.level() + 1);
+			$("#" + elm).css('background', 'none');
+			$("#answer-one").show();
+			$("#answer-two").show();
+			$("#answer-three").show();
+			$("#answer-four").show();
+			self.transitioning = false;
+			// if(self.level() >= 6) {
+			// 	if(self.level() < 11)
+			// 	{
+			// 		startSound("background");
+			// 	}
+			// 	else
+			// 	{
+			// 		startSound("background");
+			// 	}
+			// }
+		}
+		$("body").off("click");
+	}
+
  	self.rightAnswer = function(elm) {
+		console.log("rightAnswer");
  		$("#" + elm).slideUp('slow', function() {
  			startSound('rightsound', false);
- 			$("#" + elm).css('background', 'green').slideDown('slow', function() {
- 				self.money($(".active").data('amt'));
- 				if(self.level() + 1 > 15) {
-	 				$("#game").fadeOut('slow', function() {
-	 					$("#game-over").html('You Win!');
-	 					$("#game-over").fadeIn('slow');
-	 				});
- 				} else {
- 					self.level(self.level() + 1);
- 					$("#" + elm).css('background', 'none');
-			 		$("#answer-one").show();
-			 		$("#answer-two").show();
-			 		$("#answer-three").show();
-			 		$("#answer-four").show();
-			 		self.transitioning = false;
- 				}
+ 			$("#" + elm).css('background', 'green').slideDown('slow').delay(self.answer_delay).queue(function() {
+				self._next_question(elm);
  			});
  		});
  	}
 
  	// Executes the proceedure of guessing incorrectly, losing the game.
  	self.wrongAnswer = function(elm) {
+		console.log("wrongAnswer");
  		$("#" + elm).slideUp('slow', function() {
  			startSound('wrongsound', false);
- 			$("#" + elm).css('background', 'red').slideDown('slow', function() {
- 				$("#game").fadeOut('slow', function() {
- 					$("#game-over").html('Game Over!');
- 					$("#game-over").fadeIn('slow');
- 					self.transitioning = false;
- 				});
+ 			$("#" + elm).css('background', 'red').slideDown('slow').delay(self.answer_delay).queue(function() {
+ 				//$("#game").fadeOut('slow', function() {
+ 				// 	$("#game-over").html('Game Over!');
+ 				// 	$("#game-over").fadeIn('slow');
+ 				// 	self.transitioning = false;
+				 self._next_question(elm);
+				//});
+				
  			});
  		});
  	}
 
  	// Gets the money formatted string of the current won amount of money.
  	self.formatMoney = function() {
+		console.log("formatMoney");
 	    return self.money().money(2, '.', ',');
 	}
 };
@@ -167,16 +217,23 @@ var MillionaireModel = function(data) {
 // the start game functionality to trigger a game model
 // being created
 $(document).ready(function() {
+	console.log("document.ready");
 	$.getJSON("questions.json", function(data) {
-		for(var i = 1; i <= data.games.length; i++) {
-			$("#problem-set").append('<option value="' + i + '">' + i + '</option>');
-		}
-		$("#pre-start").show();
+		// for(var i = 1; i <= data.games.length; i++) {
+		// 	$("#problem-set").append('<option value="' + i + '">' + i + '</option>');
+		// }
+		$("#pre-pre-start-button").click(() => {
+			console.log("$#pre-pre-start-button.click");
+			$("#pre-pre-start").hide();
+			$("#pre-start").show();
+			//startSound('lets_play', false);
+		});
 		$("#start").click(function() {
-			var index = $('#problem-set').find(":selected").val() - 1;
+			console.log("$#start.click");
+			var index = 0;
 			ko.applyBindings(new MillionaireModel(data.games[index]));
+			startSound('background', true);
 			$("#pre-start").fadeOut('slow', function() {
-				startSound('background', true);
 				$("#game").fadeIn('slow');
 			});
 		});

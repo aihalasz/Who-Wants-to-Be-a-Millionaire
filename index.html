@@ -17,11 +17,17 @@ Author: Aaron Nech
 		<audio id="background" src='sound/background.mp3'></audio>
 		<audio id="rightsound" src='sound/right.mp3'></audio>
 		<audio id="wrongsound" src='sound/wrong.mp3'></audio>
+		<audio id="lets_play" src='sound/lets_play.mp3'></audio>
+		<audio id="final_answer_6-10" src='sound/final_answer_6-10.wav'></audio>
+		<audio id="final_answer_11-15" src='sound/final_answer_11-15.wav'></audio>
+
+		<div id="pre-pre-start">
+			<button id="pre-pre-start-button">Mehet!</button>
+		</div>
 
 		<!-- Before the game begins problem set selection -->
 		<div id="pre-start">
-			<select id="problem-set">
-			</select>
+			<h1 class="centered big-text">Ödön, Legyen Ön is Férj!</h1>
 			<button id="start">Start!</button>
 		</div>
 
@@ -63,16 +69,16 @@ Author: Aaron Nech
 				<span class="content" data-bind="text: getQuestionText()"></span>
 			</div>
 			<div id="answer-box">
-				<div id="answer-one" class="answer" data-bind="click: function() { answerQuestion(0, $element.id) }">
+				<div id="answer-one" class="answer" data-bind="click: function(d, e) { e.preventDefault();answerQuestion(0, $element.id); }">
 					<span class="big-text">A.</span><span data-bind="text: getAnswerText(0)"></span>
 				</div>
-				<div id="answer-two" class="answer" data-bind="click: function() { answerQuestion(1, $element.id) }">
+				<div id="answer-two" class="answer" data-bind="click: function(d, e) { e.preventDefault();answerQuestion(1, $element.id); }">
 					<span class="big-text">B.</span><span data-bind="text: getAnswerText(1)"></span>
 				</div>
-				<div id="answer-three" class="answer" data-bind="click: function() { answerQuestion(2, $element.id) }">
+				<div id="answer-three" class="answer" data-bind="click: function(d, e) { e.preventDefault(); answerQuestion(2, $element.id); }">
 					<span class="big-text">C.</span><span data-bind="text: getAnswerText(2)"></span>
 				</div>
-				<div id="answer-four" class="answer" data-bind="click: function() { answerQuestion(3, $element.id) }">
+				<div id="answer-four" class="answer" data-bind="click: function(d, e) { e.preventDefault(); answerQuestion(3, $element.id);}">
 					<span class="big-text">D.</span><span data-bind="text: getAnswerText(3)"></span>
 				</div>
 			</div>
