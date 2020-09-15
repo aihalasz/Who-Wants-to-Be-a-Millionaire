@@ -61,7 +61,7 @@ Author: Aaron Nech
 		<audio id="phone_main" src='sound/phone_main.wav'></audio>
 		<audio id="phone_end" src='sound/phone_end.wav'></audio>
 		<audio id="lets_play" src='sound/lets_play.mp3'></audio>
-
+		
 		<div id="pre-pre-start">
 			<button id="pre-pre-start-button">Mehet!</button>
 		</div>
@@ -111,25 +111,25 @@ Author: Aaron Nech
 			<table id="answer-box">
 				<tr width="50%">
 					<td id="answer-one" class="answer" data-bind="click: function(d, e) { e.preventDefault();answerQuestion(0, $element.id); }">
-						<table>
-							<tr><td class="big-text" width="20%">◆ A:</td><td class="answer-text" data-bind="text: getAnswerText(0)"></td></tr>
+						<table class="answer-wrapper">
+							<tr><td class="big-text" width="94px">◆ P:</td><td class="answer-text" data-bind="text: getAnswerText(0)"></td></tr>
 						</table>
 					</td>
 					<td id="answer-two" class="answer" data-bind="click: function(d, e) { e.preventDefault();answerQuestion(1, $element.id); }">
-						<table>
-							<tr><td class="big-text" width="20%">◆ B:</td><td class="answer-text" data-bind="text: getAnswerText(1)"></td></tr>
+						<table class="answer-wrapper">
+							<tr><td class="big-text" width="94px">◆ U:</td><td class="answer-text" data-bind="text: getAnswerText(1)"></td></tr>
 						</table>
 					</td>
 				</tr>
 				<tr>
 					<td id="answer-three" class="answer" data-bind="click: function(d, e) { e.preventDefault(); answerQuestion(2, $element.id); }">
-						<table>
-							<tr><td class="big-text" width="20%">◆ C:</td><td class="answer-text" data-bind="text: getAnswerText(2)"></td></tr>
+						<table class="answer-wrapper">
+							<tr><td class="big-text" width="94px">◆ M:</td><td class="answer-text" data-bind="text: getAnswerText(2)"></td></tr>
 						</table>
 					</td>
-					<td id="answer-four" class="answer" data-bind="click: function(d, e) { e.preventDefault(); answerQuestion(3, $element.id);}">
-						<table>
-							<tr><td class="big-text" width="20%">◆ D:</td><td class="answer-text" data-bind="text: getAnswerText(3)"></td></tr>
+					<td id="answer-four" class="answer" data-bind="click: function(d, e) { e.preventDefault(); answerQuestion(3, $element.id); }">
+						<table class="answer-wrapper">
+							<tr><td class="big-text" width="94px">◆ A:</td><td class="answer-text" data-bind="text: getAnswerText(3)"></td></tr>
 						</table>
 					</td>
 				</tr>

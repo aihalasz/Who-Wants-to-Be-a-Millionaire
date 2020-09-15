@@ -91,7 +91,7 @@ var MillionaireModel = function(data) {
  	// Uses the fifty-fifty option of the user
  	self.fifty = function(item, event) {
  		if(self.transitioning || !$(event.target).hasClass('hoverable'))
- 			return;
+			 return;
 		startSound('5050', false);
  		var correct = this.questions[self.level() - 1].correct;
  		var first = (correct + 1) % 4;
@@ -107,7 +107,7 @@ var MillionaireModel = function(data) {
  		}
  		if(first == 3 || second == 3) {
  			$("#answer-four").fadeOut('slow');
- 		}
+		 }
 		self.fadeOutOption(item, event);
  	}
 
@@ -142,7 +142,7 @@ var MillionaireModel = function(data) {
 				self.fadeOutOption(item, event);
 			});
 		});
- 	}
+	}
 
  	// Fades out an option used if possible
  	self.fadeOutOption = function(item, event) {
@@ -184,7 +184,7 @@ var MillionaireModel = function(data) {
  	// the player to the next level (or winning the game if all
 	 // levels have been completed)
 	 
-	self._next_question = (elm) => {
+	self._next_question = () => {
 		console.log("_next_question");
 		self.money($(".active").data('amt'));
 		if(self.level() + 1 > 15) {
@@ -194,7 +194,10 @@ var MillionaireModel = function(data) {
 			});
 		} else {
 			self.level(self.level() + 1);
-			$("#" + elm).css('background', 'none');
+			$("#answer-one").css('background', 'none');
+			$("#answer-two").css('background', 'none');
+			$("#answer-three").css('background', 'none');
+			$("#answer-four").css('background', 'none');
 			$("#answer-one").show();
 			$("#answer-two").show();
 			$("#answer-three").show();
@@ -211,7 +214,7 @@ var MillionaireModel = function(data) {
 			[_, duration] = self.getRighAnswerAudio();
 			self.startRighAnswerAudio();
  			$("#" + elm).css('background', 'lime').slideDown('slow').delay(duration ?? 0).queue(function() {
-				self._next_question(elm);
+				self._next_question();
 				$(this).dequeue();
  			});
  		});
@@ -221,14 +224,23 @@ var MillionaireModel = function(data) {
  	self.wrongAnswer = function(elm) {
 		console.log("wrongAnswer", elm);
  		$("#" + elm).slideUp('slow', function() {
+			var correctIndex = self.questions[self.level() - 1].correct;
+			var correctClass = "answer-one";
+			if (correctIndex == 1)
+				correctClass = "answer-two";
+			if (correctIndex == 2)
+				correctClass = "answer-three";
+			if (correctIndex == 3)
+				correctClass = "answer-four";
 			[_, duration] = self.getWrongAnswerAudio();
 			self.startWrongAnswerAudio();
+			$("#" + correctClass).css('background', 'lime').slideDown('slow');
  			$("#" + elm).css('background', 'red').slideDown('slow').delay(duration ?? 0).queue(function() {
  				//$("#game").fadeOut('slow', function() {
  				// 	$("#game-over").html('Game Over!');
  				// 	$("#game-over").fadeIn('slow');
  				// 	self.transitioning = false;
-				self._next_question(elm);
+				self._next_question();
 				//});
 				$(this).dequeue();
  			});
