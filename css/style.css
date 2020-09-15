@@ -135,12 +135,16 @@ audio {
 	display: all;
 }
 
-.answer {
-	table-layout: fixed;
-	width: 100%;
+.answer-wrapper {
 	border-style: solid;
 	border-width: 2px;
 	border-color: cyan;
+}
+
+.answer {
+	table-layout: fixed;
+	width: 100%;
+	
 }
 
 .answer:hover {

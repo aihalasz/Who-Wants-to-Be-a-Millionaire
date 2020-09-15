@@ -69,24 +69,24 @@ Author: Aaron Nech
 			</div>
 			<table id="answer-box">
 				<tr width="50%">
-					<td>
+					<td class="answer-wrapper">
 						<table id="answer-one" class="answer" data-bind="click: function(d, e) { e.preventDefault();answerQuestion(0, $element.id); }">
 							<tr><td class="big-text" width="20%">◆ A:</td><td class="answer-text" data-bind="text: getAnswerText(0)"></td></tr>
 						</table>
 					</td>
-					<td>
+					<td class="answer-wrapper">
 						<table id="answer-two" class="answer" data-bind="click: function(d, e) { e.preventDefault();answerQuestion(1, $element.id); }">
 							<tr><td class="big-text" width="20%">◆ B:</td><td class="answer-text" data-bind="text: getAnswerText(1)"></td></tr>
 						</table>
 					</td>
 				</tr>
 				<tr>
-					<td>
+					<td class="answer-wrapper">
 						<table id="answer-three" class="answer" data-bind="click: function(d, e) { e.preventDefault(); answerQuestion(2, $element.id); }">
 							<tr><td class="big-text" width="20%">◆ C:</td><td class="answer-text" data-bind="text: getAnswerText(2)"></td></tr>
 						</table>
 					</td>
-					<td>
+					<td class="answer-wrapper">
 						<table id="answer-four" class="answer" data-bind="click: function(d, e) { e.preventDefault(); answerQuestion(3, $element.id);}">
 							<tr><td class="big-text" width="20%">◆ D:</td><td class="answer-text" data-bind="text: getAnswerText(3)"></td></tr>
 						</table>
