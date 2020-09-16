@@ -193,10 +193,11 @@ var MillionaireModel = function(data) {
 		console.log("_next_question");
 		self.money($(".active").data('amt'));
 		if(self.level() + 1 > 15) {
-			$("#game").fadeOut('slow', function() {
-				$("#game-over").html('You Win!');
-				$("#game-over").fadeIn('slow');
-			});
+			// $("#game").fadeOut('slow', function() {
+			// 	$("#game-over").html('You Win!');
+			// 	$("#game-over").fadeIn('slow');
+			// });
+			return;
 		} else {
 			self.level(self.level() + 1);
 			$("#answer-one").css('background', 'none');
