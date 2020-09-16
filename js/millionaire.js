@@ -90,7 +90,7 @@ var MillionaireModel = function(data) {
 
  	// Uses the fifty-fifty option of the user
  	self.fifty = function(item, event) {
- 		if(self.transitioning || !$(event.target).hasClass('hoverable'))
+ 		if(self.transitioning || !$(event.target).hasClass('hoverable') || self.usedFifty())
 			 return;
 		startSound('5050', false);
 		var correct = this.questions[self.level() - 1].correct; // value: 0-3
@@ -115,45 +115,52 @@ var MillionaireModel = function(data) {
  			$("#answer-four .answer-wrapper").fadeOut('slow');
 		 }
 		self.fadeOutOption(item, event);
+		self.usedFifty(true);
  	}
 
 	self.phone_friend = function(item, event) {
-		if(self.transitioning || !$(event.target).hasClass('hoverable'))
+		if(self.transitioning || !$(event.target).hasClass('hoverable') || self.usedPhone())
 			return;
 		self.stopAllAudio();
-	    startSound('phone_main', false);
+		startSound('phone_main', false);
+		self.transitioning = true;
 	    $("body").click(() => {
+			$("body").off("click");
 			$("body").click(() => {
 				$("body").off("click");
 				stopSound('phone_main');
 				startSound('phone_end', false);
 				self.startBackgroundAudio();
 				self.fadeOutOption(item, event);
+				self.transitioning = false;
 			});
 		});
+		self.usedPhone(true);
 	}
 
 	self.ask_audience = function(item, event) {
-		if(self.transitioning || !$(event.target).hasClass('hoverable'))
+		if(self.transitioning || !$(event.target).hasClass('hoverable') || self.usedAudience())
 			return;
 		self.stopAllAudio();
 	    startSound('askaud_begin', false);
-	    startSound('askaud_loop', true);
+		startSound('askaud_loop', true);
+		self.transitioning = true;
 	    $("body").click(() => {
+			$("body").off("click");
 			$("body").click(() => {
 				$("body").off("click");
 				stopSound('askaud_loop');
 				startSound('askaud_finish');
 				self.startBackgroundAudio();
 				self.fadeOutOption(item, event);
+				self.transitioning = false;
 			});
 		});
+		self.usedAudience(true);
 	}
 
  	// Fades out an option used if possible
  	self.fadeOutOption = function(item, event) {
- 		if(self.transitioning)
- 			return;
 		$(event.target).attr('style', 'background-position: 0 -50px !important');
 		$(event.target).removeClass('hoverable');
  	}
