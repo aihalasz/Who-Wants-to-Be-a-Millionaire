@@ -199,21 +199,24 @@ var MillionaireModel = function(data) {
 			// });
 			return;
 		} else {
-			self.level(self.level() + 1);
-			$("#answer-one").css('background', 'none');
-			$("#answer-two").css('background', 'none');
-			$("#answer-three").css('background', 'none');
-			$("#answer-four").css('background', 'none');
-			$("#answer-one").show();
-			$("#answer-two").show();
-			$("#answer-three").show();
-			$("#answer-four").show();
-			if(self.level() > 5)
-			{
-				self.stopAllAudio();
-				self.startBackgroundAudio();
-			}
-			self.transitioning = false;
+			$("body").click(() => {
+				$("body").off("click");
+				self.level(self.level() + 1);
+				$("#answer-one").css('background', 'none');
+				$("#answer-two").css('background', 'none');
+				$("#answer-three").css('background', 'none');
+				$("#answer-four").css('background', 'none');
+				$("#answer-one").show();
+				$("#answer-two").show();
+				$("#answer-three").show();
+				$("#answer-four").show();
+				if(self.level() > 5)
+				{
+					self.stopAllAudio();
+					self.startBackgroundAudio();
+				}
+				self.transitioning = false;
+			});
 		}
 	}
 
@@ -304,7 +307,7 @@ var MillionaireModel = function(data) {
 			case  1:
 			case  2:
 			case  3:
-			case  4: return ['right_1_4', 3000];
+			case  4: return ['right_1_4', 2000];
 			case  5: return ['right_5', 7000];
 			case  6: return ['right_6', 3000];
 			case  7: return ['right_7', 3000];
@@ -342,7 +345,7 @@ var MillionaireModel = function(data) {
 			case  2:
 			case  3:
 			case  4:
-			case  5: return ['wrong_1_5', 5000];
+			case  5: return ['wrong_1_5', 2000];
 			case  6: return ['wrong_6', 5000];
 			case  7: return ['wrong_7', 5000];
 			case  8: return ['wrong_8', 5000];
