@@ -461,19 +461,20 @@ $(document).ready(function() {
 			$("#pre-start").show();
 			startSound('lets_play_short', false);
 		});
-		$("#start").click(function() {
-			console.log("$#start.click");
-			var index = 0;
-			var m = new MillionaireModel(data.games[index]);
-			ko.applyBindings(m);
-			stopSound('lets_play_short');
-			m.startBackgroundAudio();
-			$("#pre-start").fadeOut('slow', function() {
-				$("#game").fadeIn('slow');
-			});
-			m.transitioning = true;
+		$("body").click(() => {
+			$("body").off("click");
 			$("body").click(() => {
 				$("body").off("click");
+				console.log("$#start.click");
+				var index = 0;
+				var m = new MillionaireModel(data.games[index]);
+				ko.applyBindings(m);
+				stopSound('lets_play_short');
+				m.startBackgroundAudio();
+				$("#pre-start").fadeOut('slow', function() {
+					$("#game").fadeIn('slow');
+				});
+				m.transitioning = true;
 				$("body").click(() => {
 					$("body").off("click");
 					$("#answer-one .answer-wrapper").fadeIn('slow');
@@ -492,10 +493,10 @@ $(document).ready(function() {
 					});
 				});
 			});
+			$("#answer-one .answer-wrapper").hide();
+			$("#answer-two .answer-wrapper").hide();
+			$("#answer-three .answer-wrapper").hide();
+			$("#answer-four .answer-wrapper").hide();
 		});
-		$("#answer-one .answer-wrapper").hide();
-		$("#answer-two .answer-wrapper").hide();
-		$("#answer-three .answer-wrapper").hide();
-		$("#answer-four .answer-wrapper").hide();
 	});
 });
