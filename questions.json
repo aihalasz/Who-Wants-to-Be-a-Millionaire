@@ -3,154 +3,154 @@
 		{
 		    "questions" : [
 		        {
-		            "question" : "In what children's game are participants chased by someone designated \"It\"?",
+		            "question" : "Mi Ramcsi kedvenc színe?",
 		            "content" : [
-		                "Tag",
-		                "Simon Says",
-		                "Charades",
-		                "Hopscotch"
-		            ],
-		            "correct" : 0
-		        },
-		        {
-		            "question" : "On a radio, stations are changed by using what control?",
-		            "content" : [
-		                "Tuning",
-		                "Volume",
-		                "Bass",
-		                "Treble"
-		            ],
-		            "correct" : 0
-		        },
-		        {
-		            "question" : "Which material is most dense?",
-		            "content" : [
-		                "Silver",
-		                "Styrofoam",
-		                "Butter",
-		                "Gold"
+		                "kék",
+		                "rózsaszín",
+		                "szürke",
+		                "zöld"
 		            ],
 		            "correct" : 3
 		        },
-		        {
-		            "question" : "Which state in the United States is largest by area?",
-		            "content" : [
-		                "Alaska",
-		                "California",
-		                "Texas",
-		                "Hawaii"
-		            ],
-		            "correct" : 0
-		        },
-		        {
-		            "question" : "What is Aurora Borealis commonly known as?",
-		            "content" : [
-		                "Fairy Dust",
-		                "Northern Lights",
-		                "Book of ages",
-		                "a Game of Thrones main character"
-		            ],
-		            "correct" : 1
-		        },
 				{
-				    "correct": 3,
-				    "content": [
-				        "developed the telescope",
-				        "discovered four satellites of Jupiter",
-				        "discovered that the movement of pendulum produces a regular time measurement",
-				        "All of the above"
-				    ],
-				    "question": "Galileo was an Italian astronomer who"
+					"question" : "Mi a WC papír helyes elhelyezése?",
+					"content" : [
+						"A fal felé lóg",
+						"Kifelé lóg",
+						"A WC tartályon",
+						"A mosógépen"
+					],
+					"correct" : 1
 				},
 				{
-				    "correct": 3,
-				    "content": [
-				        "the infrared light kills bacteria in the body",
-				        "resistance power increases",
-				        "the pigment cells in the skin get stimulated and produce a healthy tan",
-				        "the ultraviolet rays convert skin oil into Vitamin D"
-				    ],
-				    "question": "Exposure to sunlight helps a person improve his health because"
+					"question" : "Ramcsi kedvenc plüsse nem más, mint",
+					"content" : [
+						"Nyuszi",
+						"Pingu",
+						"Maci",
+						"Brumi"
+					],
+					"correct" : 2
 				},
 				{
-				    "correct": 0,
-				    "content": [
-				        "a club or a local sport association for remarkable achievements",
-				        "amateur athlete, not necessarily an Olympian",
-				        "National Olympic Committee for outstanding work",
-				        "None of the above"
-				    ],
-				    "question": "Sir Thomas Fearnley Cup is awarded to"
+					"question": "Milyen hangszeren tanult meg Ramcsi először játszani?",
+					"content": [
+						"szintetizátor",
+						"furulya",
+						"oboa",
+						"gitár"
+					],
+					"correct": 3
 				},
 				{
-				    "correct": 1,
-				    "content": [
-				        "1968",
-				        "1929",
-				        "1901",
-				        "1965"
-				    ],
-				    "question": "Oscar Awards were instituted in"
+					"question": "Ramcsi kedvenc sorozata a",
+					"content": [
+						"Szívek szállodája",
+						"Jóbarátok",
+						"Modern Family",
+						"How I Met Your Mother"
+					],
+					"correct": 0
 				},
 				{
-				    "correct": 2,
-				    "content": [
-				        "1998",
-				        "1989",
-				        "1979",
-				        "1800"
-				    ],
-				    "question": "When did Margaret Thatcher became the first female Prime Minister of Britain?"
+					"question" : "Melyik szektor Ramcsi kedvence a darts táblán?",
+					"content" : [
+						"D16",
+						"T18",
+						"T19",
+						"20"
+					],
+					"correct" : 1
 				},
 				{
-				    "correct": 2,
-				    "content": [
-				        "15th April",
-				        "12th December",
-				        "1st May",
-				        "1st August"
-				    ],
-				    "question": "When is the International Workers' Day?"
+					"question": "Mi volt Ramcsi első óvodai jele?",
+					"content": [
+						"Répa",
+						"Eper",
+						"Virág",
+						"Bögre"
+					],
+					"correct": 2
 				},
 				{
-				    "correct": 2,
-				    "content": [
-				        "1962",
-				        "1963",
-				        "1964",
-				        "1965"
+					"question": "Melyik állattól fél Ramcsi a legjobban?",
+					"content": [
+						"Pókok",
+				        "Ágyipoloskák",
+				        "Csótányok",
+				        "Kutyák"
 				    ],
-				    "question": "When did China test their first atomic device?"
+					"correct": 1
 				},
 				{
-				    "correct": 3,
+					"question": "Mi Ramcsi kedvenc gyerekdala?",
 				    "content": [
-				        "1904",
-				        "1905",
-				        "1908",
-				        "1909"
+						"Süss fel nap",
+				        "Boldog születésnapot",
+				        "Süsü a sárkány",
+				        "Én kicsike vagyok"
 				    ],
-				    "question": "When did Commander Robert Peary discover the North Pole?"
+					"correct": 1
 				},
 				{
-				    "correct": 0,
-				    "content": [
-				        "819/sq. km",
-				        "602/sq. km",
-				        "415/sq. km",
-				        "500/sq. km"
-				    ],
-				    "question": "What is the population density of Kerala?"
+					"question": "Melyik testrészedet szereti Ramcsi a legjobban?",
+					"content": [
+						"kéz",
+						"kékeres méteres",
+						"pocak",
+						"vádli"
+					],
+					"correct": 3
 				},
 				{
-				    "correct": 1,
+					"question" : "Ramcsi szerint ki nyerte az 1974-es Eurovíziós Dalfesztivált?",
+					"content" : [
+						"ABBA - Waterloo",
+						"Cindy & Bert - Die Sommermelodie",
+						"Queen - Killer Queen",
+						"Mouth & MacNeal - I See A Star"
+					],
+					"correct" : 0
+				},
+				{
+					"question": "Hány anyajegy van Ramcsi hasán?",
 				    "content": [
-				        "4 km",
-				        "25 km",
-				        "500 m to 9 km",
-				        "150 km"
+						"1",
+				        "3",
+				        "7",
+				        "11"
 				    ],
-				    "question": "What is the range of missile 'Akash'?"
+					"correct": 1
+				},
+				{
+					"question": "Milyen színű volt Ramcsi kedvenc fogkeféje?",
+				    "content": [
+						"Kék",
+				        "Zöld",
+				        "Lila",
+				        "Piros"
+				    ],
+					"correct": 0
+				},
+				{
+					"question": "Mikor és hol rúgott be Ramcsi először Istenigazából?",
+					"content": [
+						"15 évesen, az unokatesójával egy családi eseményen",
+				        "16 évesen, a VOLT fesztiválon",
+				        "18 évesen, egy házibuliban",
+				        "18 évesen, az egyetemi Gólyabulin"
+				    ],
+					"correct": 2
+				},
+				{
+					"question": "Melyik testrészét mossa meg Ramcsi fürdéskor először?",
+				    "content": [
+						"arc",
+				        "kar",
+				        "hónalj",
+				        "mell"
+				    ],
+					"correct": 3
 				}
 		    ]
 		}
