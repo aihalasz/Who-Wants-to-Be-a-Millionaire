@@ -346,15 +346,15 @@ var MillionaireModel = function(data) {
 			case  3:
 			case  4:
 			case  5: return ['wrong_1_5', 2000];
-			case  6: return ['wrong_6', 5000];
-			case  7: return ['wrong_7', 5000];
-			case  8: return ['wrong_8', 5000];
-			case  9: return ['wrong_9', 5000];
+			case  6: return ['wrong_6', 4000];
+			case  7: return ['wrong_7', 4000];
+			case  8: return ['wrong_8', 4000];
+			case  9: return ['wrong_9', 4000];
 			case 10:
 			case 11:
 			case 12:
 			case 13:
-			case 14: return ['wrong_10_14', 5000];
+			case 14: return ['wrong_10_14', 4000];
 			case 15: return ['wrong_15', 8000];
 			default: return null;
 		}
