@@ -459,6 +459,25 @@ $(document).ready(function() {
 			$("#pre-start").fadeOut('slow', function() {
 				$("#game").fadeIn('slow');
 			});
+			m.transitioning = true;
+			$("body").click(() => {
+				$("body").off("click");
+				$("body").click(() => {
+					$("body").off("click");
+					$("#answer-one .answer-wrapper").fadeIn('slow', () => {
+						$("#answer-two .answer-wrapper").fadeIn('slow', () => {
+							$("#answer-three .answer-wrapper").fadeIn('slow', () => {
+								$("#answer-four .answer-wrapper").fadeIn('slow');
+							});
+						});
+					});
+					m.transitioning = false;
+				});
+			});
 		});
+		$("#answer-one .answer-wrapper").hide();
+		$("#answer-two .answer-wrapper").hide();
+		$("#answer-three .answer-wrapper").hide();
+		$("#answer-four .answer-wrapper").hide();
 	});
 });
