@@ -219,14 +219,20 @@ var MillionaireModel = function(data) {
 				}
 				$("body").click(() => {
 					$("body").off("click");
-					$("#answer-one .answer-wrapper").fadeIn('slow', () => {
-						$("#answer-two .answer-wrapper").fadeIn('slow', () => {
-							$("#answer-three .answer-wrapper").fadeIn('slow', () => {
+					$("#answer-one .answer-wrapper").fadeIn('slow');
+					$("body").click(() => {
+						$("body").off("click");
+						$("#answer-two .answer-wrapper").fadeIn('slow');
+						$("body").click(() => {
+							$("body").off("click");
+							$("#answer-three .answer-wrapper").fadeIn('slow');
+							$("body").click(() => {
+								$("body").off("click");
 								$("#answer-four .answer-wrapper").fadeIn('slow');
+								self.transitioning = false;
 							});
 						});
 					});
-					self.transitioning = false;
 				});
 			});
 		}
@@ -464,14 +470,20 @@ $(document).ready(function() {
 				$("body").off("click");
 				$("body").click(() => {
 					$("body").off("click");
-					$("#answer-one .answer-wrapper").fadeIn('slow', () => {
-						$("#answer-two .answer-wrapper").fadeIn('slow', () => {
-							$("#answer-three .answer-wrapper").fadeIn('slow', () => {
+					$("#answer-one .answer-wrapper").fadeIn('slow');
+					$("body").click(() => {
+						$("body").off("click");
+						$("#answer-two .answer-wrapper").fadeIn('slow');
+						$("body").click(() => {
+							$("body").off("click");
+							$("#answer-three .answer-wrapper").fadeIn('slow');
+							$("body").click(() => {
+								$("body").off("click");
 								$("#answer-four .answer-wrapper").fadeIn('slow');
+								m.transitioning = false;
 							});
 						});
 					});
-					m.transitioning = false;
 				});
 			});
 		});
