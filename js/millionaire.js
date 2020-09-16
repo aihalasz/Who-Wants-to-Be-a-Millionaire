@@ -97,16 +97,16 @@ var MillionaireModel = function(data) {
  		var first = (correct + 1) % 4;
  		var second = (first + 1) % 4;
  		if(first == 0 || second == 0) {
- 			$("#answer-one").fadeOut('slow');
+ 			$("#answer-one .answer-wrapper").fadeOut('slow');
  		}
  		if(first == 1 || second == 1) {
- 			$("#answer-two").fadeOut('slow');
+ 			$("#answer-two .answer-wrapper").fadeOut('slow');
  		}
  		if(first == 2 || second == 2) {
- 			$("#answer-three").fadeOut('slow');
+ 			$("#answer-three .answer-wrapper").fadeOut('slow');
  		}
  		if(first == 3 || second == 3) {
- 			$("#answer-four").fadeOut('slow');
+ 			$("#answer-four .answer-wrapper").fadeOut('slow');
 		 }
 		self.fadeOutOption(item, event);
  	}
@@ -206,16 +206,28 @@ var MillionaireModel = function(data) {
 				$("#answer-two").css('background', 'none');
 				$("#answer-three").css('background', 'none');
 				$("#answer-four").css('background', 'none');
-				$("#answer-one").show();
-				$("#answer-two").show();
-				$("#answer-three").show();
-				$("#answer-four").show();
+				$("#question").hide();
+				$("#answer-one .answer-wrapper").hide();
+				$("#answer-two .answer-wrapper").hide();
+				$("#answer-three .answer-wrapper").hide();
+				$("#answer-four .answer-wrapper").hide();
+				$("#question").fadeIn('slow');
 				if(self.level() > 5)
 				{
 					self.stopAllAudio();
 					self.startBackgroundAudio();
 				}
-				self.transitioning = false;
+				$("body").click(() => {
+					$("body").off("click");
+					$("#answer-one .answer-wrapper").fadeIn('slow', () => {
+						$("#answer-two .answer-wrapper").fadeIn('slow', () => {
+							$("#answer-three .answer-wrapper").fadeIn('slow', () => {
+								$("#answer-four .answer-wrapper").fadeIn('slow');
+							});
+						});
+					});
+					self.transitioning = false;
+				});
 			});
 		}
 	}
