@@ -93,9 +93,15 @@ var MillionaireModel = function(data) {
  		if(self.transitioning || !$(event.target).hasClass('hoverable'))
 			 return;
 		startSound('5050', false);
- 		var correct = this.questions[self.level() - 1].correct;
- 		var first = (correct + 1) % 4;
- 		var second = (first + 1) % 4;
+		var correct = this.questions[self.level() - 1].correct; // value: 0-3
+		var first = correct;
+		while (first == correct) {
+			first = Math.floor(Math.random() * 4);
+		}
+		var second = correct;
+		while (second == correct || second == first) {
+			second = Math.floor(Math.random() * 4);
+		}
  		if(first == 0 || second == 0) {
  			$("#answer-one .answer-wrapper").fadeOut('slow');
  		}
