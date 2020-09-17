@@ -3,154 +3,154 @@
 		{
 		    "questions" : [
 		        {
-		            "question" : "Mi Ramcsi kedvenc színe?",
+		            "question" : "Mi Peti kedvenc reggelije?",
 		            "content" : [
-		                "kék",
-		                "rózsaszín",
-		                "szürke",
-		                "zöld"
+		                "tojásrántotta",
+		                "bundáskenyér",
+		                "velős pirítós",
+		                "tükörtojás"
 		            ],
-		            "correct" : 3
+		            "correct" : 1
 		        },
 				{
-					"question" : "Mi a WC papír helyes elhelyezése?",
+					"question" : "Hány gyereket szeretne?",
 					"content" : [
-						"A fal felé lóg",
-						"Kifelé lóg",
-						"A WC tartályon",
-						"A mosógépen"
-					],
-					"correct" : 1
-				},
-				{
-					"question" : "Ramcsi kedvenc plüsse nem más, mint",
-					"content" : [
-						"Nyuszi",
-						"Pingu",
-						"Maci",
-						"Brumi"
+						"2",
+						"3",
+						"4",
+						"5"
 					],
 					"correct" : 2
 				},
 				{
-					"question": "Milyen hangszeren tanult meg Ramcsi először játszani?",
-					"content": [
-						"szintetizátor",
-						"furulya",
-						"oboa",
-						"gitár"
-					],
-					"correct": 3
-				},
-				{
-					"question": "Ramcsi kedvenc sorozata a",
-					"content": [
-						"Szívek szállodája",
-						"Jóbarátok",
-						"Modern Family",
-						"How I Met Your Mother"
-					],
-					"correct": 0
-				},
-				{
-					"question" : "Melyik szektor Ramcsi kedvence a darts táblán?",
+					"question" : "Milyen nevet adna az első lányotoknak?",
 					"content" : [
-						"D16",
-						"T18",
-						"T19",
-						"20"
-					],
-					"correct" : 1
-				},
-				{
-					"question": "Mi volt Ramcsi első óvodai jele?",
-					"content": [
-						"Répa",
-						"Eper",
-						"Virág",
-						"Bögre"
-					],
-					"correct": 2
-				},
-				{
-					"question": "Melyik állattól fél Ramcsi a legjobban?",
-					"content": [
-						"Pókok",
-				        "Ágyipoloskák",
-				        "Csótányok",
-				        "Kutyák"
-				    ],
-					"correct": 1
-				},
-				{
-					"question": "Mi Ramcsi kedvenc gyerekdala?",
-				    "content": [
-						"Süss fel nap",
-				        "Boldog születésnapot",
-				        "Süsü a sárkány",
-				        "Én kicsike vagyok"
-				    ],
-					"correct": 1
-				},
-				{
-					"question": "Melyik testrészedet szereti Ramcsi a legjobban?",
-					"content": [
-						"kéz",
-						"kékeres méteres",
-						"pocak",
-						"vádli"
-					],
-					"correct": 3
-				},
-				{
-					"question" : "Ramcsi szerint ki nyerte az 1974-es Eurovíziós Dalfesztivált?",
-					"content" : [
-						"ABBA - Waterloo",
-						"Cindy & Bert - Die Sommermelodie",
-						"Queen - Killer Queen",
-						"Mouth & MacNeal - I See A Star"
+						"Johanna",
+						"Laura",
+						"Jolán",
+						"Rebeka"
 					],
 					"correct" : 0
 				},
 				{
-					"question": "Hány anyajegy van Ramcsi hasán?",
-				    "content": [
-						"1",
-				        "3",
-				        "7",
-				        "11"
-				    ],
-					"correct": 1
+					"question": "Hányas cipőt hord Ödön?",
+					"content": [
+						"41",
+						"42",
+						"43",
+						"44"
+					],
+					"correct": 2
 				},
 				{
-					"question": "Milyen színű volt Ramcsi kedvenc fogkeféje?",
-				    "content": [
+					"question": "Peti kedvenc dartsjátékosa nem más mint",
+					"content": [
+						"Nathan Aspinall",
+						"Székely Penge Pál",
+						"Gary Anderson",
+						"Adrian Lewis"
+					],
+					"correct": 3
+				},
+				{
+					"question" : "Mi Ödön kedvenc autómárkája?",
+					"content" : [
+						"Ferrari",
+						"McLaren",
+						"Porsche",
+						"Tesla"
+					],
+					"correct" : 1
+				},
+				{
+					"question": "Milyen színű Ödön jelenlegi fogkeféje?",
+					"content": [
 						"Kék",
-				        "Zöld",
-				        "Lila",
-				        "Piros"
+						"Fekete",
+						"Fehér",
+						"Zöld"
+					],
+					"correct": 0
+				},
+				{
+					"question": "Milyen házimunkát csinál Peti a legszívesebben?",
+					"content": [
+						"mosogatás",
+				        "szemét levitele",
+				        "felmosás",
+				        "vasalás"
 				    ],
 					"correct": 0
 				},
 				{
-					"question": "Mikor és hol rúgott be Ramcsi először Istenigazából?",
-					"content": [
-						"15 évesen, az unokatesójával egy családi eseményen",
-				        "16 évesen, a VOLT fesztiválon",
-				        "18 évesen, egy házibuliban",
-				        "18 évesen, az egyetemi Gólyabulin"
+					"question": "Mi Peti első gondolata reggel, amikor felébred?",
+				    "content": [
+						"\"Miért nem alhatok még?\"",
+				        "Te",
+				        "Kávéfőzés",
+				        "\"Mindjárt bepisilek!\""
 				    ],
 					"correct": 2
 				},
 				{
-					"question": "Melyik testrészét mossa meg Ramcsi fürdéskor először?",
+					"question": "Mi Peti számára az álommunka?",
+					"content": [
+						"MÁV vezérigazgató",
+						"bakter",
+						"profi sportoló",
+						"miniszterelnök"
+					],
+					"correct": 3
+				},
+				{
+					"question" : "Mi Ödön kedvenc söre?",
+					"content" : [
+						"Saint-Feuillien",
+						"Tripel Karmeliet",
+						"Leffe",
+						"Grimbergen"
+					],
+					"correct" : 1
+				},
+				{
+					"question": "Hányszor égette meg Peti a kezét kenyérsütés közben (eddig)?",
 				    "content": [
-						"arc",
-				        "kar",
-				        "hónalj",
-				        "mell"
+						"1",
+				        "2",
+				        "3",
+				        "4"
 				    ],
 					"correct": 3
+				},
+				{
+					"question": "Ödön szerint mi a legjellegzetesebb szófordulatod?",
+				    "content": [
+						"mindegy",
+				        "úgyis",
+				        "amúgy",
+				        "egyébként"
+				    ],
+					"correct": 0
+				},
+				{
+					"question": "Hányszor vizsgázott Peti autóvezetésből?",
+					"content": [
+						"3",
+				        "4",
+				        "5",
+				        "6"
+				    ],
+					"correct": 2
+				},
+				{
+					"question": "Milyen mosóport használtok?",
+				    "content": [
+						"Ariel",
+				        "Persil",
+				        "Perwoll",
+				        "Tomi a szóda erejével"
+				    ],
+					"correct": 1
 				}
 		    ]
 		}
