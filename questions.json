@@ -3,154 +3,154 @@
 		{
 		    "questions" : [
 		        {
-		            "question" : "1. kérdés",
+		            "question" : "Mi Peti kedvenc reggelije?",
 		            "content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
+		                "tojásrántotta",
+		                "bundáskenyér",
+		                "velős pirítós",
+		                "tükörtojás"
 		            ],
-		            "correct" : 3
+		            "correct" : 1
 		        },
 				{
-					"question" : "2. kérdés",
+					"question" : "Hány gyereket szeretne?",
 					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct" : 1
-				},
-				{
-					"question" : "3. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
+						"2",
+						"3",
+						"4",
+						"5"
+					],
 					"correct" : 2
 				},
 				{
-					"question": "4. kérdés",
+					"question" : "Milyen nevet adna az első lányotoknak?",
 					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 3
-				},
-				{
-					"question": "5. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 0
-				},
-				{
-					"question" : "6. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct" : 1
-				},
-				{
-					"question": "7. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 2
-				},
-				{
-					"question": "8. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 1
-				},
-				{
-					"question": "9. kérdés",
-				    "content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 1
-				},
-				{
-					"question": "10. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 3
-				},
-				{
-					"question" : "11. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
+						"Johanna",
+						"Laura",
+						"Jolán",
+						"Rebeka"
+					],
 					"correct" : 0
 				},
 				{
-					"question": "12. kérdés",
-				    "content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 1
-				},
-				{
-					"question": "13. kérdés",
-				    "content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 0
-				},
-				{
-					"question": "14. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
+					"question": "Hányas cipőt hord Ödön?",
+					"content": [
+						"41",
+						"42",
+						"43",
+						"44"
+					],
 					"correct": 2
 				},
 				{
-					"question": "15. kérdés",
-				    "content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
+					"question": "Peti kedvenc dartsjátékosa nem más mint",
+					"content": [
+						"Nathan Aspinall",
+						"Székely Penge Pál",
+						"Gary Anderson",
+						"Adrian Lewis"
+					],
 					"correct": 3
+				},
+				{
+					"question" : "Mi Ödön kedvenc autómárkája?",
+					"content" : [
+						"Ferrari",
+						"McLaren",
+						"Porsche",
+						"Tesla"
+					],
+					"correct" : 1
+				},
+				{
+					"question": "Milyen színű Ödön jelenlegi fogkeféje?",
+					"content": [
+						"Kék",
+						"Fekete",
+						"Fehér",
+						"Zöld"
+					],
+					"correct": 0
+				},
+				{
+					"question": "Milyen házimunkát csinál Peti a legszívesebben?",
+					"content": [
+						"mosogatás",
+				        "szemét levitele",
+				        "felmosás",
+				        "vasalás"
+				    ],
+					"correct": 0
+				},
+				{
+					"question": "Mi Peti első gondolata reggel, amikor felébred?",
+				    "content": [
+						"\"Miért nem alhatok még?\"",
+				        "Te",
+				        "Kávéfőzés",
+				        "\"Mindjárt bepisilek!\""
+				    ],
+					"correct": 2
+				},
+				{
+					"question": "Mi Peti számára az álommunka?",
+					"content": [
+						"MÁV vezérigazgató",
+						"bakter",
+						"profi sportoló",
+						"miniszterelnök"
+					],
+					"correct": 3
+				},
+				{
+					"question" : "Mi Ödön kedvenc söre?",
+					"content" : [
+						"Saint-Feuillien",
+						"Tripel Karmeliet",
+						"Leffe",
+						"Grimbergen"
+					],
+					"correct" : 1
+				},
+				{
+					"question": "Hányszor égette meg Peti a kezét kenyérsütés közben (eddig)?",
+				    "content": [
+						"1",
+				        "2",
+				        "3",
+				        "4"
+				    ],
+					"correct": 3
+				},
+				{
+					"question": "Ödön szerint mi a legjellegzetesebb szófordulatod?",
+				    "content": [
+						"mindegy",
+				        "úgyis",
+				        "amúgy",
+				        "egyébként"
+				    ],
+					"correct": 0
+				},
+				{
+					"question": "Hányszor vizsgázott Peti autóvezetésből?",
+					"content": [
+						"3",
+				        "4",
+				        "5",
+				        "6"
+				    ],
+					"correct": 2
+				},
+				{
+					"question": "Milyen mosóport használtok?",
+				    "content": [
+						"Ariel",
+				        "Persil",
+				        "Perwoll",
+				        "Tomi a szóda erejével"
+				    ],
+					"correct": 1
 				}
 		    ]
 		}
