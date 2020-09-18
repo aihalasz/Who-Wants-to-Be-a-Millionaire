@@ -465,7 +465,7 @@ $(document).ready(function() {
 		$("#pre-pre-start-button").click(() => {
 			console.log("$#pre-pre-start-button.click");
 			$("#pre-pre-start").hide();
-			$("#pre-start-text").show();
+			$("#pre-start-img").show();
 			startSound('lets_play_short', false);
 		});
 		$("body").click(() => {
@@ -478,7 +478,7 @@ $(document).ready(function() {
 				ko.applyBindings(m);
 				stopSound('lets_play_short');
 				m.startBackgroundAudio();
-				$("#pre-start-text").fadeOut('slow', function() {
+				$("#pre-start-img").fadeOut('slow', function() {
 					$("#game").fadeIn('slow');
 				});
 				m.transitioning = true;
