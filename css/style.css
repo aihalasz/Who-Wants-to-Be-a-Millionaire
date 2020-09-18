@@ -104,10 +104,10 @@ audio {
 }
 
 #logo {
-	width: 480px;
+	max-width: 425px;
 	float: left;
-	margin-left: 240px;
-	margin-top: 60px;
+	margin-left: 270px;
+	margin-top: 40px;
 }
 
 #game-over {
