@@ -1,0 +1,44 @@
+Előkövetelmény:
+Valami webszerver, én a "Web Server for Chrome"-ot használom: 
+https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb
+A használata pofonegyszerű: Start menü "Chrome Apps" mappából elindítod, kitallózod a játék mappáját, 
+majd katt az URL-re, ami a tallózógomb alatt megjelenik.
+
+
+Kérdések megadása:
+Szerkeszd a "questions.json"-t, magától értetődő lesz, a "correct" szám 0-tól indexelt.
+A kérdések sorrendje megegyezik a json-ben lévő sorrenddel.
+
+
+Jutalmak módosítása:
+"index.html" 81-95-ig sorai, alulról felfele növekszik a nyeremény.
+Maximum 24 karakter fér ki, utána szétesik a GUI. 
+Ez javítható a "style.css"-ben a "#logo" tulajdonságainak mókolásával: a max-width a logó méretét szabályozza,
+majd mivel a megváltozott méret miatt elcsúszik a logó, a margin-left és margin-top 
+hangolásával lehet újra középre gyógyítani.
+
+
+Játékmenet:
+Erősen eseményvezérelt, szinte minden csak kattintásra történik. 
+Rossz válasz esetén is tovább megy a játék, a jutalmak zöldek vagy pirosak lesznek a választól függően.
+
+Kezdés: 
+Bal felül katt a "Mehet!"-re, ennek hatására nagyban feljön a logó + epic zene. 
+Katt a logóra, hogy tovább juss az első kérdésre.
+
+Kérdések megjelenítése: 
+A válaszlehetőségek 1-1 kattintásra jönnek fel. Javaslom a kérdés szövegét vagy 
+a logó környéki üres részt kattintani, hogy véletlenül se jelölj meg semmit a 4. katt után.
+
+Válaszadás:
+1. katt megjelöl, 2. katt (bárhol) megmutatja a helyes választ.
+Ekkor egy pár másodperc késleltetés van, mielőtt enged továbbkattintani (bárhol) a következő kérdésre.
+
+Fontos tudni játékvezetéshez:
+- Telefon: 1. kattra indul a 30 másodperces zene, 2. kattra (bárhol) vonalbontás.
+           FIGYELEM: A 30 másodperc zene végén nincs vonalbontás, érdemes gyakorolni a 2. katt időzítését.
+- Közönség: 1. kattra végtelenítve megy a szavazós zene, 2. kattra (bárhol) megáll.
+- Megjelölőzenékben lévő dobolás hossza:
+    - 1-5 kérdés: nincs
+    - 6-9 kérdés: 00:14, ne húzd sokáig
+    - 10-15 kérdés: 01:10, lehet feszíteni a húrt
