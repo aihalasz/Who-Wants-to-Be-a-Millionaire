@@ -1,158 +1,158 @@
 {
-	"games" : [
-		{
-		    "questions" : [
-		        {
-		            "question" : "1. kérdés",
-		            "content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-		            "correct" : 3
-		        },
-				{
-					"question" : "2. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct" : 1
-				},
-				{
-					"question" : "3. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct" : 2
-				},
-				{
-					"question": "4. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 3
-				},
-				{
-					"question": "5. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 0
-				},
-				{
-					"question" : "6. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct" : 1
-				},
-				{
-					"question": "7. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 2
-				},
-				{
-					"question": "8. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 1
-				},
-				{
-					"question": "9. kérdés",
-				    "content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 1
-				},
-				{
-					"question": "10. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 3
-				},
-				{
-					"question" : "11. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct" : 0
-				},
-				{
-					"question": "12. kérdés",
-				    "content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 1
-				},
-				{
-					"question": "13. kérdés",
-				    "content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 0
-				},
-				{
-					"question": "14. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 2
-				},
-				{
-					"question": "15. kérdés",
-				    "content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 3
-				}
-		    ]
-		}
-	]
+  "games": [
+    {
+      "questions": [
+        {
+          "question": "Mikor volt Timi életének első táncórája?",
+          "content": [
+            "3-4 évesen, oviban",
+            "7-8 évesen, első osztályban",
+            "11-12 évesen, ötödiktől",
+            "14-15 évesen, középiskolában"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Mi Timi első kutyájának a neve?",
+          "content": [
+            "Bono",
+            "Bruno",
+            "Néró",
+            "Zénó"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Milyen hangszeren tanult meg Timi először játszani?",
+          "content": [
+            "furulya",
+            "hegedű",
+            "oboa",
+            "nem játszik hangszeren"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "Hol találkoztatok először Timivel?",
+          "content": [
+            "a Pesti Magyar Színházban",
+            "a Casa de la Musicában",
+            "a Freelusionben",
+            "a Thália Tanodában"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Melyik állattól fél Timi a legjobban?",
+          "content": [
+            "kígyó",
+            "denevér",
+            "pók",
+            "csótány"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Melyik híresség Timi ideálja?",
+          "content": [
+            "Hugh Jackman",
+            "Jason Momoa",
+            "Jason Statham",
+            "Johnny Depp"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Kivel utazott Timi San Franciscoba?",
+          "content": [
+            "Juckóékkal",
+            "Zatyival/Attilával",
+            "Fucukával",
+            "a szüleivel"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Melyik országban nem járt (eddig) Timi?",
+          "content": [
+            "Ausztria",
+            "India",
+            "Egyiptom",
+            "Kína"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Mi Timi kedvenc étele?",
+          "content": [
+            "mákos guba",
+            "pizza",
+            "máglyarakás",
+            "tejbegríz"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Mi Timi aszcendense?",
+          "content": [
+            "Ikrek",
+            "Szűz",
+            "Rák",
+            "Bika"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Mikor ismerte meg Timi Nokit?",
+          "content": [
+            "magán ének szakon a gimi alatt",
+            "Juckó hozta a társaságba",
+            "jógán",
+            "egy karaoke buliban"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Melyik testrészedet szereti Timi a legeslegjobban?",
+          "content": [
+            "a kék szemeid",
+            "az izmos mellkasod",
+            "a hagymapopid",
+            "a puha szád"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Melyik tulajdonságodat kedveli Timi a legkevésbé?",
+          "content": [
+            "a feledékenységed",
+            "szanaszéjjel hagysz mindent",
+            "folyton énekelsz",
+            "a kommunikáción van még mit csiszolni"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Mivel tudod Timit a legjobban levenni a lábáról?",
+          "content": [
+            "egy romantikus vacsorával",
+            "azzal, hogy meghallgatod",
+            "a szeretetteljes öleléseddel",
+            "egy borozgatós, beszélgetős estével a kanapén"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "Melyik testrészét mossa meg Timi fürdéskor először?",
+          "content": [
+						"arc",
+            "kar",
+            "hát",
+            "mell"
+          ],
+          "correct": 2
+        }
+      ]
+    }
+  ]
 }
