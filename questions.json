@@ -3,153 +3,153 @@
 		{
 		    "questions" : [
 		        {
-		            "question" : "Mi Ramcsi kedvenc színe?",
+		            "question" : "1. kérdés",
 		            "content" : [
-		                "kék",
-		                "rózsaszín",
-		                "szürke",
-		                "zöld"
+		                "Válasz A",
+		                "Válasz B",
+		                "Válasz C",
+		                "Válasz D"
 		            ],
 		            "correct" : 3
 		        },
 				{
-					"question" : "Mi a WC papír helyes elhelyezése?",
+					"question" : "2. kérdés",
 					"content" : [
-						"A fal felé lóg",
-						"Kifelé lóg",
-						"A WC tartályon",
-						"A mosógépen"
-					],
+		                "Válasz A",
+		                "Válasz B",
+		                "Válasz C",
+		                "Válasz D"
+		            ],
 					"correct" : 1
 				},
 				{
-					"question" : "Ramcsi kedvenc plüsse nem más, mint",
+					"question" : "3. kérdés",
 					"content" : [
-						"Nyuszi",
-						"Pingu",
-						"Maci",
-						"Brumi"
-					],
+		                "Válasz A",
+		                "Válasz B",
+		                "Válasz C",
+		                "Válasz D"
+		            ],
 					"correct" : 2
 				},
 				{
-					"question": "Milyen hangszeren tanult meg Ramcsi először játszani?",
-					"content": [
-						"szintetizátor",
-						"furulya",
-						"oboa",
-						"gitár"
-					],
+					"question": "4. kérdés",
+					"content" : [
+		                "Válasz A",
+		                "Válasz B",
+		                "Válasz C",
+		                "Válasz D"
+		            ],
 					"correct": 3
 				},
 				{
-					"question": "Ramcsi kedvenc sorozata a",
-					"content": [
-						"Szívek szállodája",
-						"Jóbarátok",
-						"Modern Family",
-						"How I Met Your Mother"
-					],
+					"question": "5. kérdés",
+					"content" : [
+		                "Válasz A",
+		                "Válasz B",
+		                "Válasz C",
+		                "Válasz D"
+		            ],
 					"correct": 0
 				},
 				{
-					"question" : "Melyik szektor Ramcsi kedvence a darts táblán?",
+					"question" : "6. kérdés",
 					"content" : [
-						"D16",
-						"T18",
-						"T19",
-						"20"
-					],
+		                "Válasz A",
+		                "Válasz B",
+		                "Válasz C",
+		                "Válasz D"
+		            ],
 					"correct" : 1
 				},
 				{
-					"question": "Mi volt Ramcsi első óvodai jele?",
-					"content": [
-						"Répa",
-						"Eper",
-						"Virág",
-						"Bögre"
-					],
+					"question": "7. kérdés",
+					"content" : [
+		                "Válasz A",
+		                "Válasz B",
+		                "Válasz C",
+		                "Válasz D"
+		            ],
 					"correct": 2
 				},
 				{
-					"question": "Melyik állattól fél Ramcsi a legjobban?",
-					"content": [
-						"Pókok",
-				        "Ágyipoloskák",
-				        "Csótányok",
-				        "Kutyák"
-				    ],
+					"question": "8. kérdés",
+					"content" : [
+		                "Válasz A",
+		                "Válasz B",
+		                "Válasz C",
+		                "Válasz D"
+		            ],
 					"correct": 1
 				},
 				{
-					"question": "Mi Ramcsi kedvenc gyerekdala?",
-				    "content": [
-						"Süss fel nap",
-				        "Boldog születésnapot",
-				        "Süsü a sárkány",
-				        "Én kicsike vagyok"
-				    ],
+					"question": "9. kérdés",
+				    "content" : [
+		                "Válasz A",
+		                "Válasz B",
+		                "Válasz C",
+		                "Válasz D"
+		            ],
 					"correct": 1
 				},
 				{
-					"question": "Melyik testrészedet szereti Ramcsi a legjobban?",
-					"content": [
-						"kéz",
-						"kékeres méteres",
-						"pocak",
-						"vádli"
-					],
+					"question": "10. kérdés",
+					"content" : [
+		                "Válasz A",
+		                "Válasz B",
+		                "Válasz C",
+		                "Válasz D"
+		            ],
 					"correct": 3
 				},
 				{
-					"question" : "Ramcsi szerint ki nyerte az 1974-es Eurovíziós Dalfesztivált?",
+					"question" : "11. kérdés",
 					"content" : [
-						"ABBA - Waterloo",
-						"Cindy & Bert - Die Sommermelodie",
-						"Queen - Killer Queen",
-						"Mouth & MacNeal - I See A Star"
-					],
+		                "Válasz A",
+		                "Válasz B",
+		                "Válasz C",
+		                "Válasz D"
+		            ],
 					"correct" : 0
 				},
 				{
-					"question": "Hány anyajegy van Ramcsi hasán?",
-				    "content": [
-						"1",
-				        "3",
-				        "7",
-				        "11"
-				    ],
+					"question": "12. kérdés",
+				    "content" : [
+		                "Válasz A",
+		                "Válasz B",
+		                "Válasz C",
+		                "Válasz D"
+		            ],
 					"correct": 1
 				},
 				{
-					"question": "Milyen színű volt Ramcsi kedvenc fogkeféje?",
-				    "content": [
-						"Kék",
-				        "Zöld",
-				        "Lila",
-				        "Piros"
-				    ],
+					"question": "13. kérdés",
+				    "content" : [
+		                "Válasz A",
+		                "Válasz B",
+		                "Válasz C",
+		                "Válasz D"
+		            ],
 					"correct": 0
 				},
 				{
-					"question": "Mikor és hol rúgott be Ramcsi először Istenigazából?",
-					"content": [
-						"15 évesen, az unokatesójával egy családi eseményen",
-				        "16 évesen, a VOLT fesztiválon",
-				        "18 évesen, egy házibuliban",
-				        "18 évesen, az egyetemi Gólyabulin"
-				    ],
+					"question": "14. kérdés",
+					"content" : [
+		                "Válasz A",
+		                "Válasz B",
+		                "Válasz C",
+		                "Válasz D"
+		            ],
 					"correct": 2
 				},
 				{
-					"question": "Melyik testrészét mossa meg Ramcsi fürdéskor először?",
-				    "content": [
-						"arc",
-				        "kar",
-				        "hónalj",
-				        "mell"
-				    ],
+					"question": "15. kérdés",
+				    "content" : [
+		                "Válasz A",
+		                "Válasz B",
+		                "Válasz C",
+		                "Válasz D"
+		            ],
 					"correct": 3
 				}
 		    ]
