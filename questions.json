@@ -3,154 +3,154 @@
 		{
 		    "questions" : [
 		        {
-		            "question" : "1. kérdés",
+		            "question" : "Mi Bogi kedvenc filmje?",
 		            "content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
+		                "Jurassic Park",
+		                "Érkezés",
+		                "A Gyűrűk Ura: A Gyűrű Szövetsége",
+		                "A Gyűrűk Ura: A király visszatér"
 		            ],
-		            "correct" : 3
+		            "correct" : 2
 		        },
 				{
-					"question" : "2. kérdés",
+					"question" : "Mi akart lenni Bogi, amikor felnő?",
 					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
+		                "Pszichológus",
+		                "Nővér",
+		                "Lósuttogó",
+		                "Gyártásvezető"
 		            ],
-					"correct" : 1
+					"correct" : 3
 				},
 				{
-					"question" : "3. kérdés",
+					"question" : "Mi a legidegesítőbb szokásod Bogi szerint?",
 					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct" : 2
-				},
-				{
-					"question": "4. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 3
-				},
-				{
-					"question": "5. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 0
-				},
-				{
-					"question" : "6. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct" : 1
-				},
-				{
-					"question": "7. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 2
-				},
-				{
-					"question": "8. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 1
-				},
-				{
-					"question": "9. kérdés",
-				    "content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 1
-				},
-				{
-					"question": "10. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 3
-				},
-				{
-					"question" : "11. kérdés",
-					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
+		                "Nem pakolsz el magad után",
+		                "Sok időt töltesz a WC-n",
+		                "Mindig Mekit akarsz enni",
+		                "Nem lehet haragudni rád"
 		            ],
 					"correct" : 0
 				},
 				{
-					"question": "12. kérdés",
-				    "content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
-		            ],
-					"correct": 1
-				},
-				{
-					"question": "13. kérdés",
-				    "content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
+					"question": "Milyen pózban alszik Bogi a leggyakrabban?",
+					"content" : [
+		                "Hason, egyik lábát felhúzva",
+		                "Háton",
+		                "A mellkasodon",
+		                "Hason, lábak egyenesen, kezek a fejnél"
 		            ],
 					"correct": 0
 				},
 				{
-					"question": "14. kérdés",
+					"question": "Hol volt és hogy sikerült az első randitok?",
 					"content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
+		                "Gyűrű Szövetsége mozivetítés, ahol megtudtad, hogy a kedvenc karaktere Gimli",
+		                "Made By You, ahol egy kerámiakukit készítettél neki",
+		                "Olasz étterem, amiről ott derült ki, hogy francia",
+		                "Séta a Budai Várban megállásokkal, hogy tovább tartson"
+		            ],
+					"correct": 3
+				},
+				{
+					"question": "Melyik állattól fél Bogi a legjobban?",
+					"content" : [
+		                "Pók",
+		                "Tengeriuborka",
+		                "Meztelencsiga",
+		                "Giliszta"
 		            ],
 					"correct": 2
 				},
 				{
-					"question": "15. kérdés",
+					"question": "Mikor és hol rúgott be Bogi először Istenigazából?",
+					"content" : [
+		                "14 évesen a sulifarsangon",
+		                "15 évesen egy házibuliban",
+		                "16 évesen a Hajógyárin",
+		                "20 évesen egy egyetemi bulin"
+		            ],
+					"correct": 1
+				},
+				{
+					"question" : "Bogi melyik testrészét szereted Te a legjobban?",
+					"content" : [
+		                "Fenék",
+		                "Mellek",
+		                "Csípő",
+		                "Lábak"
+		            ],
+					"correct" : 1
+				},
+				{
+					"question": "Neked melyik testrészedet szereti Bogi a legjobban?",
 				    "content" : [
-		                "Válasz A",
-		                "Válasz B",
-		                "Válasz C",
-		                "Válasz D"
+		                "Mellkas",
+		                "Bicepszek",
+		                "Kékeres méteres",
+		                "Szakállas arc"
 		            ],
 					"correct": 3
+				},
+				{
+					"question": "Mivel tudod Bogit a legjobban levenni a lábáról?",
+					"content" : [
+		                "Hátvakargatás",
+		                "Magadtól leviszed a szemetet",
+		                "Előállsz egy randiötlettel",
+		                "Talpmasszázs"
+		            ],
+					"correct": 2
+				},
+				{
+					"question" : "Mi volt a legveszélyesebb dolog, amit Bogi valaha csinált?",
+					"content" : [
+		                "Kilógott egy sráccal éjjel 2-kor driftelgetni",
+		                "Ott volt a West-Balkánban 2011.01.15-én",
+		                "Stoppolva ment a gyömrői strandra, és egy középkorú pasi vette fel",
+		                "Megcsinálta a cinnamon challenge-et, amibe majdnem belefulladt"
+		            ],
+					"correct" : 2
+				},
+				{
+					"question": "Mi Bogi kedvenc sorozata?",
+				    "content" : [
+		                "Lost",
+		                "The Leftovers",
+		                "Westworld",
+		                "The Haunting of Hill House"
+		            ],
+					"correct": 0
+				},
+				{
+					"question": "Milyen színű Bogi jelenlegi fogkeféje?",
+				    "content" : [
+		                "Magenta",
+		                "Lila",
+		                "Pink",
+		                "Kék"
+		            ],
+					"correct": 1
+				},
+				{
+					"question": "Mikor van az édesanyjának (azaz az anyósodnak) a születésnapja?",
+					"content" : [
+		                "Január 14.",
+		                "Október 1.",
+		                "November 8.",
+		                "December 9."
+		            ],
+					"correct": 2
+				},
+				{
+					"question": "Milyen hangszeren tanult meg Bogi először játszani?",
+				    "content" : [
+		                "Zongora",
+		                "Furulya",
+		                "Oboa",
+		                "Fuvola"
+		            ],
+					"correct": 1
 				}
 		    ]
 		}
