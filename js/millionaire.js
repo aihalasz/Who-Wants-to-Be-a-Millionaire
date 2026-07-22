@@ -477,24 +477,29 @@ $(document).ready(function() {
 				var m = new MillionaireModel(data.games[index]);
 				ko.applyBindings(m);
 				stopSound('lets_play_short');
-				m.startBackgroundAudio();
 				$("#pre-start-img").fadeOut('slow', function() {
 					$("#game").fadeIn('slow');
 				});
+				$("#question").hide();
 				m.transitioning = true;
 				$("body").click(() => {
 					$("body").off("click");
-					$("#answer-one .answer-wrapper").fadeIn('slow');
+					m.startBackgroundAudio();
+					$("#question").fadeIn('slow');
 					$("body").click(() => {
 						$("body").off("click");
-						$("#answer-two .answer-wrapper").fadeIn('slow');
+						$("#answer-one .answer-wrapper").fadeIn('slow');
 						$("body").click(() => {
 							$("body").off("click");
-							$("#answer-three .answer-wrapper").fadeIn('slow');
+							$("#answer-two .answer-wrapper").fadeIn('slow');
 							$("body").click(() => {
 								$("body").off("click");
-								$("#answer-four .answer-wrapper").fadeIn('slow');
-								m.transitioning = false;
+								$("#answer-three .answer-wrapper").fadeIn('slow');
+								$("body").click(() => {
+									$("body").off("click");
+									$("#answer-four .answer-wrapper").fadeIn('slow');
+									m.transitioning = false;
+								});
 							});
 						});
 					});
